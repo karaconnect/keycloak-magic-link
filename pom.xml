@@ -35,7 +35,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <main.java.package>io.phasetwo.keycloak.magic</main.java.package>
     <junit.version>4.13.2</junit.version>
-    <keycloak.version>26.6.3</keycloak.version>
+    <!-- Kara: pinned to the Keycloak version accounts.karaconnect.com actually runs.
+         Upstream v0.75 targets 26.6.3; bump this in lockstep with the runtime image. -->
+    <keycloak.version>26.6.4</keycloak.version>
     <lombok.version>1.18.46</lombok.version>
     <auto-service.version>1.1.1</auto-service.version>
     <ossrh.url>https://ossrh-staging-api.central.sonatype.com</ossrh.url>
@@ -51,6 +53,9 @@
   </scm>
 
   <build>
+    <!-- Kara: stable, unversioned artifact name so deployments/ and the docker-compose
+         bind mount do not have to change on every version bump. -->
+    <finalName>keycloak-magic-link</finalName>
     <sourceDirectory>src/main/java</sourceDirectory>
     <plugins>
       <plugin>
