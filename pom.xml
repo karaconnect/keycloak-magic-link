@@ -37,7 +37,7 @@
     <junit.version>4.13.2</junit.version>
     <!-- Kara: pinned to the Keycloak version accounts.karaconnect.com actually runs.
          Upstream v0.88 targets 26.7.4 as well; bump this in lockstep with the runtime image. -->
-    <keycloak.version>26.7.5</keycloak.version>
+    <keycloak.version>26.8.1</keycloak.version>
     <lombok.version>1.18.46</lombok.version>
     <auto-service.version>1.1.1</auto-service.version>
     <ossrh.url>https://ossrh-staging-api.central.sonatype.com</ossrh.url>
